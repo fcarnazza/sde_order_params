@@ -1,0 +1,31 @@
+\documentclass{article}
+
+
+\usepackage[rgb]{xcolor}
+\usepackage{tikz}
+
+\begin{document}
+
+\pgfmathsetmacro{\n}{20}
+
+\begin{tikzpicture}[scale=5/\n]
+    \draw[help lines,step=\n/10] (-\n+0.1,-\n+0.1) grid (\n-0.1,\n-0.1);
+    \draw[very thick,->] (-\n,0) -- (\n,0) node[above]{$x$};
+    \draw[very thick,->] (0,-\n) -- (0,\n) node[above]{$y$};
+
+    \foreach \x in {-\n,...,\n} \draw[shift={(\x,0)},scale=\n/5] (0pt,2pt) -- (0pt,-2pt);
+    \foreach \y in {-\n,...,\n} \draw[shift={(0,\y)},scale=\n/5] (2pt,0pt) -- (-2pt,0pt);
+
+
+
+    \foreach \k in {1,...,\n}{ \pgfmathsetmacro{\faktor}{(\k-1)*400/\n+380}
+        \definecolor{rainbow}{wave}{\faktor}
+
+        \draw[very thick, color=rainbow] (0,\n+1-\k) -- (\k,0);
+
+        %\draw[very thick] (0,11-\k) -- (-\k,0);
+        %\draw[very thick] (0,11-\k) -- (\k,0);
+    }
+\end{tikzpicture}
+
+\end{document}
