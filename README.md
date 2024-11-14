@@ -5,3 +5,5 @@ Please use the jupyter notebook inside each folder to learn the drift (from infi
 and diffusion (from quadratic variation)
 
 DOI for contact process dataset is [10.5281/zenodo.11504229](https://zenodo.org/doi/10.5281/zenodo.11504228)
+
+DOI for dynamical Ising model dataset is [10.5281/zenodo.14163086.](https://zenodo.org/records/14163087)
